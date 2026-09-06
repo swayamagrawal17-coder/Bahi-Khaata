@@ -91,9 +91,9 @@ But one cost decided everything, and it was not the one I expected. Not knowledg
 
 ## What the studies say
 
-They point the same way. One estimate says the rule costs 8 to 10% of a year's sales in the first year. In one survey, about 70% of small firms said their biggest problem was not having trained staff, since accountants who know the new rules are mostly in the big cities. Component accounting comes up again and again as the part nobody really understands, because it needs part-by-part records most firms never kept. Almost no small firm uses the revaluation option. And the same complaint shows up from India to Turkey to Nigeria: firms see the rule as a cost, not something that helps them.
+They point the same way. **One estimate says the rule costs 8 to 10% of a year's sales in the first year.** In one survey, **about 70% of small firms said their biggest problem was not having trained staff,** since accountants who know the new rules are mostly in the big cities. **Component accounting comes up again and again as the part nobody really understands,** because it needs part-by-part records most firms never kept. Almost no small firm uses the revaluation option. And **the same complaint shows up from India to Turkey to Nigeria: firms see the rule as a cost, not something that helps them.**
 
-That is the whole problem in one line. Ind AS 16 was written for companies with a full compliance team, then applied to companies doing careful accounts on a tight budget. The idea that keeps coming back is not to let small firms off, but to give them a lighter version: start with the basics and move to market value later, and set up government-backed local valuers so the valuation bill stops being the deciding factor. Without that, audits will keep finding the same problems.`,
+That is the whole problem in one line. **Ind AS 16 was written for companies with a full compliance team, then applied to companies doing careful accounts on a tight budget.** The idea that keeps coming back is not to let small firms off, but to give them a lighter version: start with the basics and move to market value later, and set up government-backed local valuers so the valuation bill stops being the deciding factor. Without that, audits will keep finding the same problems.`,
   },
   {
     slug: "what-a-dividend-yield-does-not-tell-you",
@@ -108,15 +108,15 @@ Quick definitions. The *dividend* is the cash a company pays its shareholders ea
 
 ## Three companies, three habits
 
-Reliance's yield stayed near 0.3 to 0.5% the whole time. Not because it was stingy. Its payout ratio was under 10% because almost all the profit was going back into Jio and its retail business. Over the same five years, ROE rose from about 12% to 15%. That is what kept-back profit is supposed to do when someone is using it well.
+**Reliance's yield stayed near 0.3 to 0.5% the whole time.** Not because it was stingy. **Its payout ratio was under 10% because almost all the profit was going back into Jio and its retail business.** Over the same five years, **ROE rose from about 12% to 15%.** That is what kept-back profit is supposed to do when someone is using it well.
 
-TCS is the opposite. It pays out about 40% of its profit, yields a little over 1%, and still earns more than 33% on equity every single year. A company that can give back that much and stay that profitable is telling you it has run out of projects that would earn more than the shareholder could. So it hands the money back. That is not weakness. It is a company that knows what it can and can't do.
+**TCS is the opposite.** It pays out about 40% of its profit, yields a little over 1%, and **still earns more than 33% on equity every single year.** A company that can give back that much and stay that profitable is telling you it has run out of projects that would earn more than the shareholder could. So it hands the money back. That is not weakness. It is a company that knows what it can and can't do.
 
 HDFC Bank is in between: about 20% payout, a yield near 1%, ROE in the high teens and slipping down slowly. One thing to remember with a bank: how much it can pay out is partly decided by the regulator, not just the board.
 
 ## What it comes down to
 
-The yield on its own tells you almost nothing. Low yield with a low payout and rising ROE is a growth story. Low yield with a high payout is often a company in trouble. Same small number, opposite meanings. You can't tell them apart without checking the payout ratio and asking what the kept-back profit is earning.
+**The yield on its own tells you almost nothing.** **Low yield with a low payout and rising ROE is a growth story. Low yield with a high payout is often a company in trouble.** Same small number, opposite meanings. You can't tell them apart without checking the payout ratio and asking what the kept-back profit is earning.
 
 One thing surprised me. The dividend is the steady part. Reliance returned more than 30% in one year and less than 5% two years later, while the dividend only ever went up. I had assumed it was the other way round, that the payout jumped around and the price stayed steady.
 
@@ -135,15 +135,15 @@ In theory, instant noodles are a plain commodity. Cheap, mass-made, one brand mo
 
 ## Not behaving like a commodity
 
-That is not what I found. Half said taste was the main reason they bought, not price. Only about a third had ever seen an ad for the product. What actually got them to try it was K-dramas, K-pop and short videos, named by more people than ads were.
+That is not what I found. **Half said taste was the main reason they bought, not price.** Only about a third had ever seen an ad for the product. **What actually got them to try it was K-dramas, K-pop and short videos,** named by more people than ads were.
 
 In demand-and-supply terms, that does two things. It moves the whole demand curve out, because a wave of pop culture brings in buyers who weren't buying before. And it makes the curve steeper, because those buyers are attached to one brand and one experience, so a price rise doesn't push them straight to a cheaper option.
 
 ## How much room that buys
 
-You can see it in the answers. Buyers spread across three or four brands instead of all picking the cheapest. The spicy versions won, even though they are harder to eat. And about 40% said they would only cut back if the price went up by more than 20%.
+You can see it in the answers. **Buyers spread across three or four brands instead of all picking the cheapest.** The spicy versions won, even though they are harder to eat. **And about 40% said they would only cut back if the price went up by more than 20%.**
 
-It is the same move a coffee chain uses to charge ten times the price of instant coffee, or a sneaker brand to charge far more than the shoe costs to make. Part of what you are buying is the product. The other part is what the product is linked to: K-pop, a challenge, a feeling. Once that link is strong enough, the seller has stopped competing on price.
+It is the same move a coffee chain uses to charge ten times the price of instant coffee, or a sneaker brand to charge far more than the shoe costs to make. Part of what you are buying is the product. **The other part is what the product is linked to: K-pop, a challenge, a feeling.** Once that link is strong enough, the seller has stopped competing on price.
 
 32 people in one city, mostly students, and a survey only records what people say, not what they do in the shop. Still, even a small one showed the gap between how a commodity is supposed to behave and how it behaves once a culture gets attached to it.`,
   },
@@ -160,11 +160,11 @@ Quite a few mixed up ozone damage with global warming, or with normal air pollut
 
 ## The treaty almost nobody knew
 
-The part almost no one had heard of was the **Montreal Protocol**, the 1987 agreement that banned the chemicals, mostly CFCs from old fridges and spray cans, that were destroying the ozone layer. Even fewer knew how the story ended. It worked. The ozone layer is healing. Current estimates say it will be back to its 1980 condition in a few decades. Every country in the world signed the treaty. The banned chemicals are down by about 99%.
+The part almost no one had heard of was the **Montreal Protocol**, the 1987 agreement that banned the chemicals, mostly CFCs from old fridges and spray cans, that were destroying the ozone layer. Even fewer knew how the story ended. **It worked. The ozone layer is healing.** **Current estimates say it will be back to its 1980 condition in a few decades.** **Every country in the world signed the treaty.** **The banned chemicals are down by about 99%.**
 
 ## Why that one worked
 
-Why did this treaty succeed when climate talks keep getting stuck? Mostly because of its shape. The target was small: a few chemicals made by a few companies, not the entire way the world makes energy. Replacements were ready, so companies could switch without changing daily life. There was a fund to help poorer countries pay for the switch, so it was not just a bill handed to them. And it had teeth: countries that stayed out faced trade restrictions on those chemicals.
+Why did this treaty succeed when climate talks keep getting stuck? **Mostly because of its shape.** **The target was small: a few chemicals made by a few companies,** not the entire way the world makes energy. **Replacements were ready,** so companies could switch without changing daily life. **There was a fund to help poorer countries pay for the switch,** so it was not just a bill handed to them. And it had teeth: countries that stayed out faced trade restrictions on those chemicals.
 
 Climate change has none of this cleanly. The causes are everywhere. The replacements are only half-ready. And the people who pay and the people who benefit are in different countries and different decades.
 
