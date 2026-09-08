@@ -2,6 +2,7 @@ import { site } from "../config";
 import { usePageMeta } from "../lib/usePageMeta";
 import { useUI } from "../lib/preferencesContext";
 import { useReveal } from "../lib/useReveal";
+import { renderMarkdown } from "../lib/renderMarkdown";
 
 export default function About() {
   usePageMeta({
@@ -37,8 +38,7 @@ export default function About() {
         aria-labelledby="why-heading"
       >
         <h2 id="why-heading">{ui.about.whyTitle}</h2>
-        <p>{ui.about.whyP1}</p>
-        <p>{ui.about.whyP2}</p>
+        {renderMarkdown([ui.about.whyP1, ui.about.whyP2].join("\n\n"))}
       </section>
 
       <dl

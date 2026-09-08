@@ -50,9 +50,9 @@ export const strings = {
         "This blog is where that learning happens in public: field research, financial models, and explainers written as I work through them, not after the fact.",
       whyTitle: 'Why "Bahi Khaata"',
       whyP1:
-        "A bahi khaata is the traditional Indian name for ledger accounts: a book of cloth-bound pages, tied shut with a string, written by hand. For generations it was how traders, shopkeepers, and family firms kept their books, long before accounting software, in the local language.",
+        "A **bahi khaata** is the traditional Indian name for ledger accounts: a book of cloth-bound pages, tied shut with a string, written by hand. For generations it was how traders, shopkeepers, and family firms kept their books, long before accounting software, in the local language.",
       whyP2:
-        "As a commerce student, I resonated deeply with this name. Just like traders used to trade and record each transaction in their bahi khaata, I am also learning new things and writing all those new findings in my bahi khaata.",
+        "As a commerce student, I resonated deeply with this name. Just like traders used to trade and record each transaction in their bahi khaata, I am also learning new things and writing all those new findings in my **bahi khaata**.",
       privacyTitle: "Your privacy",
       privacy:
         "This site keeps your theme, language, and reading choices in your browser only. It sets no cookies, runs no analytics or trackers, and self-hosts its fonts, so nothing you do here is sent anywhere.",
@@ -101,14 +101,14 @@ export const strings = {
       kicker: "बही खाता रखने वाला",
       title: "परिचय",
       bioP1:
-        "बी.कॉम का छात्र और CMA फ़ाउंडेशन उत्तीर्ण। मैं बाज़ार, निजी वित्त और नीति पर लिखता हूँ, उन्हें पढ़ते हुए, सुर्ख़ियों के बजाय ज़मीनी काम और वित्तीय मॉडलिंग के आधार पर।",
+        "मैं B.Com का छात्र हूँ और CMA Foundation की परीक्षा पास कर चुका हूँ। मैं बाजार, व्यक्तिगत वित्त और नीतियों के बारे में लिखता हूँ, जिन चीज़ों को मैं खुद पढ़ते और समझते हुए सीख रहा हूँ। मेरी लिखाई सिर्फ खबरों या सुर्खियों पर आधारित नहीं है, बल्कि रिसर्च, फील्डवर्क और वित्तीय मॉडलिंग पर आधारित है।",
       bioP2:
-        "यह ब्लॉग वहीं है जहाँ वह सीखना सबके सामने होता है: ज़मीनी शोध, वित्तीय मॉडल, और समझाने वाले लेख जो मैं काम करते हुए लिखता हूँ, बाद में नहीं।",
-      whyTitle: '"बही खाता" नाम क्यों',
+        "यह ब्लॉग मेरी सीखने की प्रक्रिया का एक हिस्सा है। यहाँ मैं अपनी रिसर्च, बनाए गए वित्तीय मॉडल और किसी विषय को समझने के दौरान तैयार किए गए आसान लेख साझा करता हूँ। यानी जो कुछ मैं सीखता और समझता हूँ, उसे उसी सफर के दौरान यहाँ लिखता हूँ।",
+      whyTitle: '"Bahi Khaata" क्यों?',
       whyP1:
-        "बही खाता, हिसाब की बहियों का पारंपरिक भारतीय नाम है: कपड़े में बँधे पन्नों की एक किताब, डोरी से बाँधी हुई, हाथ से लिखी हुई। पीढ़ियों तक व्यापारी, दुकानदार और पारिवारिक फ़र्में यही रखती थीं, अकाउंटिंग सॉफ़्टवेयर से बहुत पहले, अपनी भाषा में।",
+        "**बही-खाता** भारत में हिसाब-किताब रखने की एक पुरानी और पारंपरिक व्यवस्था है। पहले व्यापारी, दुकानदार और परिवार के कारोबार अपने लेन-देन का हिसाब कपड़े से बंधी हुई एक किताब में हाथ से लिखा करते थे। किताब को एक धागे से बांधकर रखा जाता था। यह सब उस समय होता था जब न कंप्यूटर थे और न ही आज जैसा अकाउंटिंग सॉफ्टवेयर।",
       whyP2:
-        "कॉमर्स का छात्र होने के नाते, इस नाम से मेरा गहरा जुड़ाव है। जैसे व्यापारी व्यापार करते थे और हर लेन-देन अपने बही खाते में दर्ज करते थे, वैसे ही मैं भी नई चीज़ें सीख रहा हूँ और वे सारी नई बातें अपने बही खाते में लिख रहा हूँ।",
+        "एक कॉमर्स के छात्र के रूप में मुझे यह नाम अपने आप से जुड़ा हुआ लगता है। जैसे पुराने समय में व्यापारी अपने हर लेन-देन को बही-खाते में लिखकर रखते थे, वैसे ही मैं भी नई चीज़ें सीख रहा हूँ और उनसे मिली अपनी समझ और जानकारी को अपने **बही-खाते** में लिख रहा हूँ।",
       privacyTitle: "आपकी निजता",
       privacy:
         "यह साइट आपकी थीम, भाषा और पढ़ने की पसंद सिर्फ़ आपके ब्राउज़र में रखती है। यह कोई कुकी नहीं रखती, कोई एनालिटिक्स या ट्रैकर नहीं चलाती, और अपने फ़ॉन्ट ख़ुद होस्ट करती है, इसलिए यहाँ आप जो करते हैं वह कहीं नहीं भेजा जाता।",
@@ -157,14 +157,14 @@ export const strings = {
       kicker: "Bahi khaata rakhne wala",
       title: "About",
       bioP1:
-        "B.Com student aur CMA Foundation qualifier. Main markets, personal finance aur policy par likhta hoon, unhe padhte hue, headlines ke bajaye fieldwork aur financial modeling ke aadhaar par.",
+        "Main B.Com ka student hoon aur CMA Foundation ki exam pass kar chuka hoon. Main market, personal finance aur policies ke baare mein likhta hoon, jin cheezon ko main khud padhte aur samajhte hue seekh raha hoon. Meri likhai sirf khabron ya headlines par aadhaarit nahi hai, balki research, fieldwork aur financial modeling par aadhaarit hai.",
       bioP2:
-        "Yeh blog wahi hai jahan woh seekhna sabke saamne hota hai: field research, financial models, aur samjhane wale lekh jo main kaam karte hue likhta hoon, baad mein nahi.",
-      whyTitle: '"Bahi Khaata" naam kyun',
+        "Yeh blog meri seekhne ki process ka ek hissa hai. Yahan main apni research, banaye gaye financial models aur kisi topic ko samajhne ke dauraan taiyaar kiye gaye aasaan lekh share karta hoon. Yaani jo kuch main seekhta aur samajhta hoon, use usi safar ke dauraan yahan likhta hoon.",
+      whyTitle: '"Bahi Khaata" kyun?',
       whyP1:
-        "Bahi khaata, hisaab ki bahiyon ka paramparik Bharatiya naam hai: kapde mein bandhe pannon ki ek kitaab, dori se bandhi hui, haath se likhi hui. Peedhiyon tak vyapari, dukandar aur family firms yahi rakhti thi, accounting software se bahut pehle, apni bhasha mein.",
+        "**Bahi-khaata** India mein hisaab-kitaab rakhne ki ek purani aur paramparik vyavastha hai. Pehle vyapari, dukandar aur family businesses apne len-den ka hisaab kapde se bandhi hui ek kitaab mein haath se likha karte the. Kitaab ko ek dhaage se baandhkar rakha jaata tha. Yeh sab us samay hota tha jab na computer the aur na hi aaj jaisa accounting software.",
       whyP2:
-        "Commerce ka student hone ke naate, is naam se mera gehra judaav hai. Jaise vyapari vyapar karte the aur har len den apne bahi khaate mein darj karte the, waise hi main bhi nayi cheezein seekh raha hoon aur woh saari nayi baatein apne bahi khaate mein likh raha hoon.",
+        "Ek commerce ke student ke roop mein mujhe yeh naam apne aap se juda hua lagta hai. Jaise purane samay mein vyapari apne har len-den ko bahi-khaate mein likhkar rakhte the, waise hi main bhi nayi cheezein seekh raha hoon aur unse mili apni samajh aur jaankari ko apne **bahi-khaate** mein likh raha hoon.",
       privacyTitle: "Aapki privacy",
       privacy:
         "Yeh site aapki theme, bhasha aur padhne ki pasand sirf aapke browser mein rakhti hai. Yeh koi cookie nahi rakhti, koi analytics ya tracker nahi chalati, aur apne fonts khud host karti hai, isliye yahan aap jo karte hain woh kahin nahi bheja jaata.",

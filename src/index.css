@@ -845,7 +845,8 @@ main:focus {
 }
 
 /* Key figures and sub-labels pick up the accent so the eye can scan them. */
-.post__body strong {
+.post__body strong,
+.prose strong {
   font-weight: 600;
   color: var(--rail);
 }
