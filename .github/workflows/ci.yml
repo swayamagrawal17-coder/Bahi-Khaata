@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      # `build` also runs scripts/postbuild.mjs, which fails on bad metadata,
+      # a stale reading time, a missing content file, or a CSP hash mismatch.
+      - run: npm run build
+      - name: No em dashes in shipped text
+        run: |
+          if grep -rnP '\x{2014}' src scripts index.html README.md; then
+            echo "Found em dashes (use commas / colons / parentheses)." >&2
+            exit 1
+          fi

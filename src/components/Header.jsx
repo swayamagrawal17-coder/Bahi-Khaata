@@ -1,9 +1,13 @@
 import { NavLink, Link } from "react-router-dom";
 import { site } from "../config";
+import { useUI } from "../lib/preferencesContext";
 import ThemeToggle from "./ThemeToggle";
+import LangToggle from "./LangToggle";
 import mark from "../assets/logo-mark.png";
 
 export default function Header() {
+  const ui = useUI();
+
   return (
     <header className="masthead">
       <div className="masthead__id">
@@ -15,9 +19,10 @@ export default function Header() {
       </div>
       <nav className="masthead__nav" aria-label="Primary">
         <NavLink to="/" end>
-          Index
+          {ui.nav.index}
         </NavLink>
-        <NavLink to="/about">About</NavLink>
+        <NavLink to="/about">{ui.nav.about}</NavLink>
+        <LangToggle />
         <ThemeToggle />
       </nav>
     </header>

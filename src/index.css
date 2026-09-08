@@ -22,8 +22,10 @@
   --selection: #dee3d0;
   --paper-line: rgba(27, 33, 28, 0.045);
 
-  --serif: "Newsreader", Georgia, "Times New Roman", serif;
-  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --serif: "Newsreader", "Noto Serif Devanagari", Georgia, "Times New Roman",
+    serif;
+  --mono: "IBM Plex Mono", "Noto Sans Devanagari", ui-monospace, "SF Mono",
+    Menlo, monospace;
 
   --measure: 63ch;
   --ease: cubic-bezier(0.2, 0.6, 0.2, 1);
@@ -89,7 +91,7 @@ body {
   background: var(--sheet);
   color: var(--ink);
   font-family: var(--serif);
-  font-size: 19px;
+  font-size: 1.1875rem;
   line-height: 1.62;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -179,7 +181,7 @@ h3 {
   color: var(--ink);
   border: 1px solid var(--rule-strong);
   padding: 10px 16px;
-  font: 500 13px/1 var(--mono);
+  font: 500 0.8125rem/1 var(--mono);
   transition: top 150ms var(--ease);
 }
 
@@ -202,7 +204,7 @@ h3 {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 23px;
+  font-size: 1.4375rem;
   font-weight: 500;
   letter-spacing: -0.015em;
   color: var(--ink);
@@ -218,7 +220,7 @@ h3 {
 .tagline {
   margin: 6px 0 0;
   font-style: italic;
-  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 1.4;
   color: var(--muted);
   max-width: 34ch;
@@ -227,9 +229,11 @@ h3 {
 .masthead__nav {
   display: flex;
   align-items: center;
-  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px 4px;
   flex-shrink: 0;
-  font: 500 11.5px/1 var(--mono);
+  font: 500 0.71875rem/1 var(--mono);
   letter-spacing: 0.09em;
   text-transform: uppercase;
 }
@@ -269,6 +273,39 @@ h3 {
   border-color: var(--rail);
 }
 
+/* Language switch: mirrors the .views__btn idiom, sized to sit next to
+   the theme toggle in the masthead. */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+
+.lang-toggle__btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 6px 7px;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: none;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 150ms var(--ease);
+}
+
+.lang-toggle__btn:hover {
+  color: var(--ink);
+}
+
+.lang-toggle__btn.is-active {
+  color: var(--ink);
+  box-shadow: inset 0 -2px var(--rail);
+}
+
 /* ── Main column ─────────────────────────────────────── */
 
 main {
@@ -300,7 +337,7 @@ main:focus {
   padding: 8px 12px;
   border: 0;
   background: transparent;
-  font: 500 11px/1 var(--mono);
+  font: 500 0.6875rem/1 var(--mono);
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--muted);
@@ -315,6 +352,16 @@ main:focus {
 .views__btn.is-active {
   color: var(--ink);
   box-shadow: inset 0 -2px var(--rail);
+}
+
+/* One-line orientation under the filters. */
+.orientation {
+  margin: -14px 0 26px;
+  font-style: italic;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--muted);
+  max-width: var(--measure);
 }
 
 /* ── The ledger ─────────────────────────────────────── */
@@ -334,7 +381,7 @@ main:focus {
   padding: 12px 0 9px;
   background: var(--sheet);
   border-bottom: 1px solid var(--rule-strong);
-  font: 500 10.5px/1 var(--mono);
+  font: 500 0.65625rem/1 var(--mono);
   letter-spacing: 0.11em;
   text-transform: uppercase;
   color: var(--muted);
@@ -380,7 +427,7 @@ main:focus {
 .row__coords {
   display: none;
   margin: 0 0 8px;
-  font: 500 11px/1.4 var(--mono);
+  font: 500 0.6875rem/1.4 var(--mono);
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--muted);
@@ -393,7 +440,7 @@ main:focus {
 
 .row__title {
   margin: 0 0 6px;
-  font-size: 21px;
+  font-size: 1.3125rem;
   font-weight: 500;
   line-height: 1.24;
   letter-spacing: -0.01em;
@@ -416,7 +463,7 @@ main:focus {
 
 .row__excerpt {
   margin: 0;
-  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 1.5;
   color: var(--muted);
   max-width: 52ch;
@@ -425,7 +472,7 @@ main:focus {
 .row__date {
   grid-area: date;
   margin: 3px 0 0;
-  font: 500 12.5px/1.4 var(--mono);
+  font: 500 0.78125rem/1.4 var(--mono);
   letter-spacing: 0.01em;
   color: var(--muted);
 }
@@ -433,7 +480,7 @@ main:focus {
 .row__section {
   grid-area: section;
   margin: 4px 0 0;
-  font: 500 10.5px/1.4 var(--mono);
+  font: 500 0.65625rem/1.4 var(--mono);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--section);
@@ -442,7 +489,7 @@ main:focus {
 .row__length {
   grid-area: length;
   margin: 4px 0 0;
-  font: 500 10.5px/1.4 var(--mono);
+  font: 500 0.65625rem/1.4 var(--mono);
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--muted);
@@ -460,7 +507,7 @@ main:focus {
   margin: 0;
   border-top: 1px solid var(--ink);
   padding-top: 13px;
-  font: 500 10.5px/1 var(--mono);
+  font: 500 0.65625rem/1 var(--mono);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted);
@@ -484,7 +531,7 @@ main:focus {
   align-items: center;
   min-height: 44px;
   margin: -10px 0 20px;
-  font: 500 11px/1 var(--mono);
+  font: 500 0.6875rem/1 var(--mono);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
@@ -501,14 +548,14 @@ main:focus {
 
 .post__section {
   margin: 0 0 12px;
-  font: 500 11px/1 var(--mono);
+  font: 500 0.6875rem/1 var(--mono);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--section);
 }
 
 .post__title {
-  font-size: clamp(30px, 6vw, 44px);
+  font-size: clamp(1.875rem, 6vw, 2.75rem);
   font-weight: 500;
   line-height: 1.08;
   letter-spacing: -0.022em;
@@ -527,7 +574,7 @@ main:focus {
   grid-template-columns: max-content 1fr;
   gap: 5px 18px;
   margin: 20px 0 0;
-  font: 500 11.5px/1.5 var(--mono);
+  font: 500 0.71875rem/1.5 var(--mono);
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -548,6 +595,9 @@ main:focus {
 }
 
 .post__record a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
   color: var(--ink);
   border-bottom: 1px solid var(--link-line);
 }
@@ -557,11 +607,130 @@ main:focus {
   border-color: var(--rail);
 }
 
+/* Brief / Full switch for a single entry. */
+.reading-mode {
+  margin: 18px 0 0;
+}
+
+.reading-mode__group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  margin: 0 -12px;
+}
+
+.reading-mode__btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 0;
+  background: transparent;
+  font: 500 0.6875rem/1 var(--mono);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 150ms var(--ease);
+}
+
+.reading-mode__btn:hover {
+  color: var(--ink);
+}
+
+.reading-mode__btn.is-active {
+  color: var(--ink);
+  box-shadow: inset 0 -2px var(--rail);
+}
+
+/* One-time note explaining the switch. */
+.hint {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: var(--measure);
+  margin: 12px 0 0;
+  padding: 10px 12px;
+  background: var(--raised);
+  box-shadow: inset 3px 0 var(--rail);
+  font: 500 0.75rem/1.5 var(--mono);
+  color: var(--muted);
+  animation: rise-in 400ms var(--ease) both;
+}
+
+.hint__dismiss {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  min-height: 28px;
+  padding: 2px;
+  border: 0;
+  background: transparent;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 150ms var(--ease);
+}
+
+.hint__dismiss:hover {
+  color: var(--rail);
+}
+
+/* Loading placeholder while a post's text chunk downloads. */
+.post__loading {
+  max-width: var(--measure);
+  margin-top: 6px;
+}
+
+.post__loading span {
+  display: block;
+  height: 0.85rem;
+  margin-bottom: 0.9rem;
+  border-radius: 2px;
+  background: var(--raised);
+  animation: post-loading-pulse 1.3s var(--ease) infinite;
+}
+
+.post__loading span:nth-child(2) {
+  width: 92%;
+  animation-delay: 0.15s;
+}
+
+.post__loading span:nth-child(3) {
+  width: 60%;
+  animation-delay: 0.3s;
+}
+
+@keyframes post-loading-pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Short note under the About contacts. */
+.about-note {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: var(--measure);
+}
+
 /* ── Prose ──────────────────────────────────────────── */
 
 .post__body,
 .prose {
-  font-size: 19px;
+  font-size: 1.1875rem;
   line-height: 1.72;
   max-width: var(--measure);
 }
@@ -573,7 +742,7 @@ main:focus {
 
 /* Opening paragraph reads a little larger, as a lead-in. */
 .post__body > p:first-of-type {
-  font-size: 20.5px;
+  font-size: 1.28125rem;
   line-height: 1.6;
   color: var(--ink);
 }
@@ -582,7 +751,7 @@ main:focus {
   position: relative;
   margin: 52px 0 18px;
   padding-top: 22px;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-weight: 600;
   line-height: 1.24;
   letter-spacing: -0.012em;
@@ -590,6 +759,29 @@ main:focus {
 }
 
 .post__body h2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--rail);
+}
+
+/* Standalone prose sections (About) get the same accented heading, a touch
+   smaller. */
+.prose h2 {
+  position: relative;
+  margin: 40px 0 14px;
+  padding-top: 20px;
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.24;
+  letter-spacing: -0.012em;
+  color: var(--rail);
+}
+
+.prose h2::before {
   content: "";
   position: absolute;
   top: 0;
@@ -664,7 +856,7 @@ main:focus {
 
 .ledger-nav__label {
   display: block;
-  font: 500 10px/1 var(--mono);
+  font: 500 0.625rem/1 var(--mono);
   letter-spacing: 0.13em;
   text-transform: uppercase;
   color: var(--muted);
@@ -673,7 +865,7 @@ main:focus {
 .ledger-nav__title {
   display: block;
   margin-top: 7px;
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: 500;
   line-height: 1.3;
   color: var(--ink);
@@ -694,7 +886,7 @@ main:focus {
   flex-wrap: wrap;
   align-items: center;
   gap: 0 10px;
-  font: 500 11px/1.5 var(--mono);
+  font: 500 0.6875rem/1.5 var(--mono);
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--muted);
@@ -785,11 +977,36 @@ main:focus {
   transition: transform 120ms linear;
 }
 
+/* Suspense fallback for lazy routes. */
+.route-fallback {
+  padding-top: 4px;
+}
+
+.route-fallback__bar {
+  display: block;
+  height: 2px;
+  width: 40%;
+  background: var(--rail);
+  animation: route-fallback-slide 1s var(--ease) infinite;
+}
+
+@keyframes route-fallback-slide {
+  0% {
+    transform: translateX(-10%) scaleX(0.4);
+  }
+  50% {
+    transform: translateX(60%) scaleX(1);
+  }
+  100% {
+    transform: translateX(150%) scaleX(0.4);
+  }
+}
+
 /* ── Responsive ─────────────────────────────────────── */
 
 @media (max-width: 620px) {
   body {
-    font-size: 17px;
+    font-size: 1.0625rem;
   }
 
   .sheet {
@@ -801,7 +1018,9 @@ main:focus {
   }
 
   .masthead__nav {
-    margin-left: -8px;
+    margin-left: -9px;
+    justify-content: flex-start;
+    flex-shrink: 1;
   }
 
   .ledger__head {
@@ -826,12 +1045,18 @@ main:focus {
 
   .post__body,
   .prose {
-    font-size: 17.5px;
+    font-size: 1.09375rem;
   }
 }
 
 .ledger-nav__item--next {
   text-align: right;
+}
+
+/* A solitary "older/newer" link should not sit right-aligned across the
+   full width. */
+.ledger-nav__item--next:only-child {
+  text-align: left;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -850,5 +1075,19 @@ main:focus {
 
   .paper-lines {
     transform: none !important;
+  }
+
+  .hint,
+  .post__loading span,
+  .route-fallback__bar {
+    animation: none;
+  }
+
+  .post__loading span {
+    opacity: 0.7;
+  }
+
+  .route-fallback__bar {
+    width: 100%;
   }
 }

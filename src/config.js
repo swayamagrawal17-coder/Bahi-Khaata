@@ -12,9 +12,10 @@ export const site = {
     "B.Com student and CMA Foundation qualifier. I write about markets, personal finance, and policy as I study them, grounded in fieldwork and financial modeling rather than headlines.",
   email: "swayamagrawal17@gmail.com",
   linkedin: "https://linkedin.com/in/swayam-agrawal-",
-  // Your live URL, no trailing slash. Update this after you deploy so that
-  // sitemap, RSS feed, canonical links, and social previews point at the
-  // real domain. Used only at build time and for canonical links.
+  // Your live URL, no trailing slash. Used for canonical links, the sitemap,
+  // the RSS feed, and social previews. On Vercel the build reads the real
+  // deployment domain from the environment first, so this value is only the
+  // fallback for local builds; still, keep it correct.
   url: "https://bahikhaata.vercel.app",
 };
 

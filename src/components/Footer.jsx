@@ -1,9 +1,12 @@
 import { site } from "../config";
+import { useUI } from "../lib/preferencesContext";
 
 export default function Footer() {
+  const ui = useUI();
+
   return (
     <footer className="colophon">
-      <span>Kept by {site.author}</span>
+      <span>{ui.footer.keptBy(site.author)}</span>
       <span className="colophon__sep" aria-hidden="true">
         /
       </span>

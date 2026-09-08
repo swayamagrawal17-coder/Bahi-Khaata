@@ -1,8 +1,8 @@
 # Bahi Khaata
 
-Your finance & economics blog, built with React + Vite. No backend and no
-database: posts live in a single file, and the whole site is static (which is
-exactly what Vercel's free tier is built for).
+A finance and economics blog, built with React + Vite. No backend, no database:
+posts are plain files and the whole site is static, which is exactly what
+Vercel's free tier is built for.
 
 ---
 
@@ -23,24 +23,34 @@ you edit.
 
 ## 2. How to publish a new post
 
-You only ever need to touch **one file**: `src/data/posts.js`
+Two files: the listing entry, and the text.
 
-1. Open `src/data/posts.js`.
-2. Scroll to the bottom, where there is a commented-out template.
-3. Copy that template, paste it near the top of the `posts` array, and fill
-   in the fields:
-   - `slug`: the URL-friendly name, e.g. `"my-first-post"`
-   - `title`: the headline
-   - `date`: e.g. `"September 6, 2026"`
-   - `category`: must match one of the categories in `src/config.js`
-   - `excerpt`: one or two sentences shown on the homepage
-   - `content`: your full post. Write plain paragraphs separated by a
-     blank line. You can use `**bold**`, `*italic*`, `[link](https://...)`,
-     and `## Subheading`.
-4. Save the file. If `npm run dev` is running, refresh your browser to see it.
-5. Push to GitHub (see below), and Vercel will redeploy automatically.
+1. **`src/data/posts.js`**: copy the template at the bottom into the `posts`
+   array and fill in:
+   - `slug`: the URL name, e.g. `"my-first-post"`
+   - `minutes`: reading time (run `npm run build` once and copy the number it
+     reports; the build fails if this is wrong)
+   - `title` / `excerpt`: shown in the list, and used for the page title/meta
+   - `date`: e.g. `"September 8, 2026"`
+   - `category`: must match one in `src/config.js`
+   - `hasBrief`: `true` if the content file has a `brief`
+   - `translations` (optional): `{ hi: { title, excerpt }, hinglish: {...} }`
+2. **`src/data/content/<slug>.js`**: copy an existing file. It exports
+   `{ brief, content, hi: { brief, content }, hinglish: {...} }`. Markdown:
+   blank-line paragraphs, `## subheading`, `- list`, `**bold**`, `*italic*`,
+   `[link](https://...)`. Anything you leave out of `hi` / `hinglish` falls
+   back to English.
+3. Save, refresh if `npm run dev` is running, then push (see below).
 
-No other file needs to change to add a post.
+**Interface text** (nav, buttons, the About name-story, 404 copy, the privacy
+note) lives in `src/lib/strings.js`, one table per language. Section names stay
+in English in every language. `sitemap.xml`, the RSS feed, canonical links and
+social-share cards are English-only: the language switch is a reader
+convenience, not a full multilingual site.
+
+`npm run build` runs a check step: it fails on a stale `minutes`, a missing
+content file, a broken per-route HTML file, or a Content-Security-Policy that
+no longer matches the inline theme script.
 
 ---
 
@@ -53,26 +63,19 @@ email, and LinkedIn link) is in one place and safe to edit freely.
 
 ## 4. Deploying to Vercel
 
-**Recommended: connect GitHub, so every future post auto-deploys.**
+**Connect GitHub, so every future post auto-deploys.**
 
-1. Create a new repository on [GitHub](https://github.com/new) (keep it empty,
-   no README).
-2. In this project folder, run:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial blog"
-   git branch -M main
-   git remote add origin YOUR_GITHUB_REPO_URL
-   git push -u origin main
-   ```
-3. Go to [vercel.com](https://vercel.com), sign in with GitHub, click
+1. Push this repo to GitHub (`git push`).
+2. Go to [vercel.com](https://vercel.com), sign in with GitHub, click
    **Add New, then Project**, and select this repository.
-4. Vercel auto-detects Vite, so just click **Deploy**. No configuration needed.
-5. You'll get a live URL like `your-blog.vercel.app`.
+3. Vercel auto-detects Vite and reads `vercel.json`. Click **Deploy**.
+4. You'll get a live URL like `your-blog.vercel.app`.
+5. **After the first deploy**, check two things: open `your-blog.vercel.app/about`
+   and view source (the `<title>` should say "About", not just "Bahi Khaata"),
+   and update `site.url` in `src/config.js` if the domain is different, then
+   push again.
 
-From now on, every time you add a post and run `git push`, Vercel redeploys
-automatically within about a minute, with no dashboard clicking required.
+From then on, every `git push` redeploys automatically in about a minute.
 
 **Alternative (no GitHub):** install the Vercel CLI (`npm i -g vercel`), run
 `vercel` inside this folder, and follow the prompts. You'd need to re-run
@@ -82,24 +85,42 @@ automatically within about a minute, with no dashboard clicking required.
 
 ## 5. What's already included
 
-- Homepage with category filters (Research / Markets / Personal Finance / Policy)
-- Individual post pages with markdown-style formatting
-- An About page
-- Light and dark theme with a toggle in the header
-- Two sample posts based on your own research, showing the format. Replace or
-  remove them whenever you're ready
-- Mobile-responsive layout
+- Homepage with category filters; each post's text loads only when opened
+- Markdown post pages (tiny built-in renderer, no dependency)
+- A **Brief / Full** toggle on posts that have a `brief` (remembered per reader)
+- An **English / Hindi / Hinglish** language switch (remembered per reader;
+  posts fall back to English where a translation is missing)
+- An About page with the name story and a short privacy note
+- Light and dark theme, self-hosted fonts, no third-party requests or trackers
+- Per-route static HTML with Open Graph, Twitter, canonical and JSON-LD tags;
+  `sitemap.xml`, `robots.txt`, RSS feed, `site.webmanifest`
+- Security headers + a hash-based CSP in `vercel.json`
+- `.github/workflows/ci.yml` runs lint + build on every push
+- Keyboard navigation, visible focus, reduced-motion support, AA contrast
+- Mobile-responsive down to 320px; text sizes in `rem`
+
+Reader preferences are stored in the browser under `theme`, `lang`,
+`readingMode`, and `hintReadingModeSeen`. Nothing is sent to a server.
 
 ---
 
-## 6. Project structure (for reference; you won't need to touch most of this)
+## 6. Project structure (you won't need to touch most of this)
 
 ```
 src/
-  config.js           blog name, tagline, bio, links
-  data/posts.js        ALL your blog posts live here
-  lib/                 small helpers (reading time)
-  components/          header, footer, post list item, theme toggle
-  pages/               Home, PostPage, About, NotFound
-  index.css            all styling
+  config.js            blog name, tagline, bio, links, fallback URL
+  fonts.css            @font-face for the self-hosted fonts
+  data/
+    posts.js           the post list (title, date, section, excerpt, minutes)
+    content/<slug>.js   each post's full text (English + hi + hinglish)
+  lib/
+    strings.js         interface text, one table per language
+    renderMarkdown.jsx  the small markdown renderer
+    resolvePost.js      picks title/excerpt (and body) for the current language
+    PreferencesProvider.jsx / preferencesContext.js   language + reading mode
+  components/           header, footer, toggles, route announcer + fallback
+  pages/                Home, PostPage, About, NotFound
+  index.css             all styling
+scripts/postbuild.mjs   per-route HTML, sitemap, RSS, and build checks
+public/fonts/           the woff2 files
 ```
