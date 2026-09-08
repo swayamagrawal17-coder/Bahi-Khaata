@@ -273,6 +273,53 @@ h3 {
   border-color: var(--rail);
 }
 
+/* Animated sun / moon: the sun disc + rays draw out and shrink as the moon
+   draws in. Driven purely by the `.is-dark` class and CSS transitions. */
+.theme-toggle svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  overflow: visible;
+}
+
+.theme-toggle__sun,
+.theme-toggle__moon {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  transition: transform 550ms var(--ease), opacity 320ms var(--ease);
+}
+
+.theme-toggle__sun > *,
+.theme-toggle__moon {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 550ms var(--ease), transform 550ms var(--ease),
+    opacity 320ms var(--ease);
+}
+
+/* Light (default): sun shown, moon folded away. */
+.theme-toggle__moon {
+  transform: scale(0.25);
+  opacity: 0;
+  stroke-dashoffset: 1;
+}
+
+/* Dark. */
+.theme-toggle.is-dark .theme-toggle__sun {
+  transform: scale(0.25);
+  opacity: 0;
+}
+
+.theme-toggle.is-dark .theme-toggle__sun > * {
+  stroke-dashoffset: 1;
+}
+
+.theme-toggle.is-dark .theme-toggle__moon {
+  transform: scale(1);
+  opacity: 1;
+  stroke-dashoffset: 0;
+}
+
 /* Language switch: mirrors the .views__btn idiom, sized to sit next to
    the theme toggle in the masthead. */
 .lang-toggle {

@@ -31,11 +31,28 @@ function syncThemeColor() {
   meta.setAttribute("content", sheet);
 }
 
+// Sun rays as normalised paths, so CSS can "draw" them with stroke-dashoffset.
+// Geometry adapted from the animated-theme-toggle design.
+const RAYS = [
+  "M12.4 1.76v2",
+  "M12.4 21.76v2",
+  "M4.63 4.98 6.05 6.4",
+  "M18.77 19.12l1.42 1.42",
+  "M1.4 12.76h2",
+  "M21.4 12.76h2",
+  "M4.63 20.54 6.05 19.12",
+  "M18.77 6.4 20.19 4.98",
+];
+
+const MOON =
+  "M21.19 13.2a9 9 0 0 1-9.79 7.96 9 9 0 1 1 0-17.95 7 7 0 0 0 9.79 9.99Z";
+
 export default function ThemeToggle() {
   // `null` means "follow the system"; a string means the user has chosen.
   const [choice, setChoice] = useState(readStored);
   const [system, setSystem] = useState(systemTheme);
   const theme = choice ?? system;
+  const isDark = theme === "dark";
 
   // Track the OS preference at all times, so if the user clears their choice
   // (or never made one) the live value is always current.
@@ -52,54 +69,42 @@ export default function ThemeToggle() {
   }, [theme]);
 
   function toggle() {
-    const nextChoice = theme === "dark" ? "light" : "dark";
-    setChoice(nextChoice);
+    const next = isDark ? "light" : "dark";
+    setChoice(next);
     try {
-      localStorage.setItem("theme", nextChoice);
+      localStorage.setItem("theme", next);
     } catch {
       // ignore write failures (private mode, blocked storage)
     }
   }
 
-  const nextLabel = theme === "dark" ? "light" : "dark";
+  const nextLabel = isDark ? "light" : "dark";
 
   return (
     <button
       type="button"
-      className="theme-toggle"
+      className={"theme-toggle" + (isDark ? " is-dark" : "")}
       onClick={toggle}
       aria-label={`Switch to ${nextLabel} theme`}
       title={`Switch to ${nextLabel} theme`}
     >
-      {theme === "dark" ? (
-        <svg
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinecap="round"
-          aria-hidden="true"
-        >
-          <circle cx="12" cy="12" r="4" />
-          <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
-        </svg>
-      ) : (
-        <svg
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          aria-hidden="true"
-        >
-          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
-        </svg>
-      )}
+      <svg
+        viewBox="0 0 25 25"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+      >
+        <g className="theme-toggle__sun">
+          <circle cx="12.4" cy="12.76" r="5" pathLength="1" />
+          {RAYS.map((d, i) => (
+            <path key={i} d={d} pathLength="1" />
+          ))}
+        </g>
+        <path className="theme-toggle__moon" d={MOON} pathLength="1" />
+      </svg>
     </button>
   );
 }
