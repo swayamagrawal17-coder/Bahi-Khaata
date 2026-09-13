@@ -22,10 +22,8 @@
   --selection: #dee3d0;
   --paper-line: rgba(27, 33, 28, 0.045);
 
-  --serif: "Newsreader", "Noto Serif Devanagari", Georgia, "Times New Roman",
-    serif;
-  --mono: "IBM Plex Mono", "Noto Sans Devanagari", ui-monospace, "SF Mono",
-    Menlo, monospace;
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
   --measure: 63ch;
   --ease: cubic-bezier(0.2, 0.6, 0.2, 1);
@@ -958,8 +956,20 @@ main:focus {
   color: var(--rail);
 }
 
+.colophon__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
 .colophon__sep {
   color: var(--rule-strong);
+}
+
+.letter-swap {
+  display: inline-block;
+  cursor: pointer;
 }
 
 /* ── Motion ─────────────────────────────────────────── */
