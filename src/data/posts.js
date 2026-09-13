@@ -22,7 +22,7 @@
 //   run `npm run build` once and copy the number it reports.
 // - hasBrief: true if src/data/content/<slug>.js provides a `brief`
 //   (shows the Brief / Full toggle on the post). Omit or false otherwise.
-// - translations: OPTIONAL { hi: { title, excerpt }, hinglish: { title, excerpt } }.
+// - translations: OPTIONAL { hinglish: { title, excerpt } }.
 //   Anything omitted falls back to English. Never translate slug/date/category.
 // ─────────────────────────────────────────────────────────
 
@@ -37,11 +37,6 @@ export const posts = [
       "I asked 51 vendors in Pune how UPI has changed their business. Almost all of them use it. It also fails on them far more often than anyone admits.",
     hasBrief: true,
     translations: {
-      hi: {
-        title: "51 रेहड़ीवालों ने UPI के बारे में क्या सिखाया",
-        excerpt:
-          "मैंने पुणे के 51 विक्रेताओं से पूछा कि UPI ने उनके काम को कैसे बदला है। लगभग सभी इसका इस्तेमाल करते हैं। और यह उनके साथ उतनी बार नाकाम होता है जितना कोई मानता नहीं।",
-      },
       hinglish: {
         title: "51 Rehdiwalon Ne UPI Ke Baare Mein Kya Sikhaya",
         excerpt:
@@ -59,11 +54,6 @@ export const posts = [
       "One small factory follows the fixed-asset accounting rules properly. Doing that costs more than the people who wrote the rules seem to expect.",
     hasBrief: true,
     translations: {
-      hi: {
-        title: "छोटे कारोबार के लिए Ind AS इतना मुश्किल क्यों लगता है",
-        excerpt:
-          "एक छोटी फ़ैक्ट्री संपत्ति के हिसाब के नियम ठीक से मानती है। ऐसा करने में उतना ख़र्च आता है जितना नियम बनाने वालों ने शायद नहीं सोचा।",
-      },
       hinglish: {
         title: "Chhote Business Ke Liye Ind AS Itna Mushkil Kyun Lagta Hai",
         excerpt:
@@ -81,11 +71,6 @@ export const posts = [
       "Reliance pays a tiny dividend. That doesn't make it a bad deal. Working out why taught me what the number actually means.",
     hasBrief: true,
     translations: {
-      hi: {
-        title: "डिविडेंड यील्ड आपको क्या नहीं बताती",
-        excerpt:
-          "रिलायंस बहुत छोटा डिविडेंड देती है। इससे वह ख़राब सौदा नहीं बन जाती। यह क्यों है, यह समझने में मुझे पता चला कि वह नंबर असल में क्या बताता है।",
-      },
       hinglish: {
         title: "Dividend Yield Aapko Kya Nahi Batati",
         excerpt:
@@ -103,11 +88,6 @@ export const posts = [
       "Instant noodles should be a boring, price-sensitive product. A small survey showed how K-pop changed that.",
     hasBrief: true,
     translations: {
-      hi: {
-        title: "जब एक टीवी शो डिमांड कर्व हिला देता है",
-        excerpt:
-          "इंस्टेंट नूडल्स को एक उबाऊ, दाम पर टिका उत्पाद होना चाहिए। एक छोटे सर्वे ने दिखाया कि K-pop ने इसे कैसे बदला।",
-      },
       hinglish: {
         title: "Jab Ek TV Show Demand Curve Hila Deta Hai",
         excerpt:
@@ -125,11 +105,6 @@ export const posts = [
       "A treaty from 1987 fixed the ozone layer. My survey found that almost nobody knows it worked.",
     hasBrief: true,
     translations: {
-      hi: {
-        title: "ओज़ोन संधि ने काम किया। लगभग किसी को पता नहीं।",
-        excerpt:
-          "1987 की एक संधि ने ओज़ोन परत ठीक कर दी। मेरे सर्वे में पता चला कि लगभग किसी को नहीं मालूम कि इसने काम किया।",
-      },
       hinglish: {
         title: "Ozone Treaty Ne Kaam Kiya. Lagbhag Kisi Ko Pata Nahi.",
         excerpt:
@@ -148,7 +123,6 @@ export const posts = [
   //   excerpt: "One or two sentences that summarize the post.",
   //   hasBrief: true,
   //   translations: {
-  //     hi: { title: "...", excerpt: "..." },
   //     hinglish: { title: "...", excerpt: "..." },
   //   },
   // },

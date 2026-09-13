@@ -13,7 +13,6 @@ export default function LangToggle() {
           type="button"
           className={"lang-toggle__btn" + (lang === code ? " is-active" : "")}
           aria-pressed={lang === code}
-          lang={code === "hi" ? "hi" : undefined}
           onClick={() => setLang(code)}
         >
           {ui.lang[code]}

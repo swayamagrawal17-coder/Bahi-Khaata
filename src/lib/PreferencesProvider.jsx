@@ -3,7 +3,7 @@ import { PreferencesContext } from "./preferencesContext";
 import { LANGS } from "./strings";
 
 // Maps our language codes to a valid `lang` attribute value.
-const HTML_LANG = { en: "en", hi: "hi", hinglish: "hi-Latn" };
+const HTML_LANG = { en: "en", hinglish: "hi-Latn" };
 const MODES = ["brief", "full"];
 
 function readPref(key, allowed, fallback) {

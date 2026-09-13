@@ -1,21 +1,20 @@
 // ─────────────────────────────────────────────────────────
-// INTERFACE TEXT, IN THREE LANGUAGES
+// INTERFACE TEXT, IN TWO LANGUAGES
 //
 // Every language table below has the same keys, so interface text never
 // needs a fallback (only post content does, see resolvePost.js).
 // Entries that take a value are written as functions with the same
 // arguments in every language.
 //
-// House rule: no em dashes anywhere. Use commas, colons, parentheses, or
-// the Devanagari danda (।).
+// House rule: no em dashes anywhere. Use commas, colons, or parentheses.
 // ─────────────────────────────────────────────────────────
 
-export const LANGS = ["en", "hi", "hinglish"];
+export const LANGS = ["en", "hinglish"];
 
 export const strings = {
   en: {
     nav: { index: "Index", about: "About" },
-    lang: { group: "Language", en: "EN", hi: "Hindi", hinglish: "Hinglish" },
+    lang: { group: "Language", en: "EN", hinglish: "Hinglish" },
     home: {
       filterGroup: "Filter entries by section",
       all: "All",
@@ -67,65 +66,9 @@ export const strings = {
     footer: { keptBy: (author) => `Kept by ${author}` },
   },
 
-  hi: {
-    nav: { index: "सूची", about: "परिचय" },
-    lang: { group: "भाषा", en: "EN", hi: "Hindi", hinglish: "Hinglish" },
-    home: {
-      filterGroup: "विषय के अनुसार प्रविष्टियाँ छाँटें",
-      all: "सभी",
-      orientation:
-        "कोई विषय चुनें, या पूरा बही खाता पढ़ें। किसी भी प्रविष्टि में छोटा सार या पूरा लेख खोलें।",
-      colDate: "तारीख़",
-      colEntry: "प्रविष्टि",
-      colSection: "विषय",
-      colLength: "लंबाई",
-      countAll: (n) => `${n} ${n === 1 ? "प्रविष्टि" : "प्रविष्टियाँ"}`,
-      countFiltered: (shown, total) => `${total} में से ${shown} प्रविष्टियाँ`,
-      closeLine: (count) => `${count} दर्ज`,
-      empty: (view) => `${view} के अंतर्गत अभी कुछ दर्ज नहीं है।`,
-    },
-    post: {
-      back: "सूची पर वापस",
-      recDate: "तारीख़",
-      recLength: "लंबाई",
-      recFiled: "विषय",
-      minUnit: "मिनट",
-      mode: { group: "लेख की लंबाई चुनें", brief: "सार", full: "पूरा" },
-      hint: "नया: छोटा सार पढ़ें, या पूरी प्रविष्टि।",
-      hintDismiss: "यह सूचना हटाएँ",
-      moreGroup: "और प्रविष्टियाँ",
-      newer: "नई प्रविष्टि",
-      older: "पुरानी प्रविष्टि",
-    },
-    about: {
-      kicker: "बही खाता रखने वाला",
-      title: "परिचय",
-      bioP1:
-        "मैं B.Com का छात्र हूँ और CMA Foundation की परीक्षा पास कर चुका हूँ। मैं बाजार, व्यक्तिगत वित्त और नीतियों के बारे में लिखता हूँ, जिन चीज़ों को मैं खुद पढ़ते और समझते हुए सीख रहा हूँ। मेरी लिखाई सिर्फ खबरों या सुर्खियों पर आधारित नहीं है, बल्कि रिसर्च, फील्डवर्क और वित्तीय मॉडलिंग पर आधारित है।",
-      bioP2:
-        "यह ब्लॉग मेरी सीखने की प्रक्रिया का एक हिस्सा है। यहाँ मैं अपनी रिसर्च, बनाए गए वित्तीय मॉडल और किसी विषय को समझने के दौरान तैयार किए गए आसान लेख साझा करता हूँ। यानी जो कुछ मैं सीखता और समझता हूँ, उसे उसी सफर के दौरान यहाँ लिखता हूँ।",
-      whyTitle: '"Bahi Khaata" क्यों?',
-      whyP1:
-        "**बही-खाता** भारत में हिसाब-किताब रखने की एक पुरानी और पारंपरिक व्यवस्था है। पहले व्यापारी, दुकानदार और परिवार के कारोबार अपने लेन-देन का हिसाब कपड़े से बंधी हुई एक किताब में हाथ से लिखा करते थे। किताब को एक धागे से बांधकर रखा जाता था। यह सब उस समय होता था जब न कंप्यूटर थे और न ही आज जैसा अकाउंटिंग सॉफ्टवेयर।",
-      whyP2:
-        "एक कॉमर्स के छात्र के रूप में मुझे यह नाम अपने आप से जुड़ा हुआ लगता है। जैसे पुराने समय में व्यापारी अपने हर लेन-देन को बही-खाते में लिखकर रखते थे, वैसे ही मैं भी नई चीज़ें सीख रहा हूँ और उनसे मिली अपनी समझ और जानकारी को अपने **बही-खाते** में लिख रहा हूँ।",
-      privacyTitle: "आपकी निजता",
-      privacy:
-        "यह साइट आपकी थीम, भाषा और पढ़ने की पसंद सिर्फ़ आपके ब्राउज़र में रखती है। यह कोई कुकी नहीं रखती, कोई एनालिटिक्स या ट्रैकर नहीं चलाती, और अपने फ़ॉन्ट ख़ुद होस्ट करती है, इसलिए यहाँ आप जो करते हैं वह कहीं नहीं भेजा जाता।",
-    },
-    notFound: {
-      kicker: "अदर्ज",
-      title: "इस पते पर कोई प्रविष्टि नहीं",
-      body: "हो सकता है लिंक ग़लत टाइप हुआ हो, या प्रविष्टि हट गई हो। जो कुछ भी पोस्ट किया गया है वह सूची में है।",
-      goTo: "यहाँ जाएँ",
-      indexLink: "सूची",
-    },
-    footer: { keptBy: (author) => `${author} द्वारा रखा गया` },
-  },
-
   hinglish: {
     nav: { index: "Index", about: "About" },
-    lang: { group: "Bhasha", en: "EN", hi: "Hindi", hinglish: "Hinglish" },
+    lang: { group: "Bhasha", en: "EN", hinglish: "Hinglish" },
     home: {
       filterGroup: "Section ke hisaab se entries filter karein",
       all: "Sabhi",

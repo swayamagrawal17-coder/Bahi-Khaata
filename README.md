@@ -34,11 +34,11 @@ Two files: the listing entry, and the text.
    - `date`: e.g. `"September 8, 2026"`
    - `category`: must match one in `src/config.js`
    - `hasBrief`: `true` if the content file has a `brief`
-   - `translations` (optional): `{ hi: { title, excerpt }, hinglish: {...} }`
+   - `translations` (optional): `{ hinglish: { title, excerpt } }`
 2. **`src/data/content/<slug>.js`**: copy an existing file. It exports
-   `{ brief, content, hi: { brief, content }, hinglish: {...} }`. Markdown:
+   `{ brief, content, hinglish: { brief, content } }`. Markdown:
    blank-line paragraphs, `## subheading`, `- list`, `**bold**`, `*italic*`,
-   `[link](https://...)`. Anything you leave out of `hi` / `hinglish` falls
+   `[link](https://...)`. Anything you leave out of `hinglish` falls
    back to English.
 3. Save, refresh if `npm run dev` is running, then push (see below).
 
@@ -88,7 +88,7 @@ From then on, every `git push` redeploys automatically in about a minute.
 - Homepage with category filters; each post's text loads only when opened
 - Markdown post pages (tiny built-in renderer, no dependency)
 - A **Brief / Full** toggle on posts that have a `brief` (remembered per reader)
-- An **English / Hindi / Hinglish** language switch (remembered per reader;
+- An **English / Hinglish** language switch (remembered per reader;
   posts fall back to English where a translation is missing)
 - An About page with the name story and a short privacy note
 - Light and dark theme, self-hosted fonts, no third-party requests or trackers
@@ -112,7 +112,7 @@ src/
   fonts.css            @font-face for the self-hosted fonts
   data/
     posts.js           the post list (title, date, section, excerpt, minutes)
-    content/<slug>.js   each post's full text (English + hi + hinglish)
+    content/<slug>.js   each post's full text (English + hinglish)
   lib/
     strings.js         interface text, one table per language
     renderMarkdown.jsx  the small markdown renderer

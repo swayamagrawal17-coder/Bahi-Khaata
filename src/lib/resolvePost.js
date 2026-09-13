@@ -19,7 +19,7 @@ export function resolvePost(post, lang = "en") {
 }
 
 // Body fields (from src/data/content/<slug>.js). `mod` is the default export
-// of that module: { brief, content, hi: {...}, hinglish: {...} }.
+// of that module: { brief, content, hinglish: {...} }.
 export function resolveBody(mod, lang = "en") {
   const t = lang !== "en" && mod ? mod[lang] : null;
   const brief = (t && t.brief) || (mod && mod.brief) || "";

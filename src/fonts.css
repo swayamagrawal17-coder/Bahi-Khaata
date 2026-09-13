@@ -1,7 +1,6 @@
 /* Self-hosted fonts: subset copies of Google Fonts (Newsreader, IBM Plex Mono),
    Latin + Latin-ext only. Newsreader is a variable file, so one @font-face per
-   subset covers weights 400 to 600. Devanagari (Hindi / Hinglish post text)
-   falls back to the reader's system Noto face. */
+   subset covers weights 400 to 600. */
 
 /* ── Newsreader ────────────────────────────────────────── */
 @font-face {
